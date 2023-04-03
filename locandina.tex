@@ -3,8 +3,8 @@
 \usepackage[usenames]{color}
 \usepackage{graphicx}
 \usepackage{verbatim,url}
+\usepackage{contour}
 %\usepackage{rotating}
-
 
 \setlength{\textwidth}{\paperwidth}
 \setlength{\oddsidemargin}{0cm}
@@ -18,14 +18,16 @@
 \setlength{\headsep}{0cm}
 \setlength{\tabcolsep}{0.2em}
 
-\newcommand{\buh}[1]{\textsf{#1}\\}
+\newcommand{\buh}[1]{\contour{white}{\textsf{#1}}\\}
+\newcommand{\bah}[1]{\textsf{#1}\\}
 %\textcolor{my}{#1}}\\}
 
 %\makeatletter
 %\addto@hook\every@verbatim{\textbf}
 
 \begin{document}
-
+\contourlength{1pt}
+\contournumber{20}
 \definecolor{my}{rgb}{1,1,1}
 \definecolor{img}{rgb}{0.6,0.6,0.6}
 \color{black}
@@ -46,7 +48,9 @@
 \bf
 
 \Huge
-\buh{CALCULUS of VARIATIONS \\ \& \\ GEOMETRIC MEASURE THEORY}
+\buh{CALCULUS of VARIATIONS}
+\buh{\&}
+\buh{GEOMETRIC MEASURE THEORY}
 \vspace{2cm}
 \Large
 \buh{Aula Magna --- Polo Fibonacci}
@@ -62,7 +66,7 @@
 \mbox{}\hspace{1cm}
 \begin{minipage}{0.45\textwidth}
 \Large
-\buh{Invited Speakers:}
+\bah{Invited Speakers:}
 \\
 \normalsize
 \textsf{
@@ -95,7 +99,7 @@ Dario Trevisan (Università di Pisa)\\
 \begin{minipage}{0.45\textwidth}
     \vspace{7cm}
     \Large
-    \buh{Organizers:}
+    \bah{Organizers:}
     \\
     \normalsize
     \textsf{
