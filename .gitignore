@@ -1,0 +1,6 @@
+*.aux
+*.tex
+*.fls
+*.log
+*.fdb_latexmk
+locandina.pdf
