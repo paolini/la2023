@@ -3,22 +3,31 @@
 \usepackage{amsmath}
 \usepackage[english]{babel}
 \usepackage{xcolor}
-\newcommand\Linepage[1][0.25in]{% Change to suit
-    \color{gray!30}
+\usepackage{graphicx}
+\usepackage[noprint,thirtytwo,twouparticle]{booklet}
+
+\def\hrulefill{\leavevmode\leaders\hrule height 0.1pt\hfill\kern 0pt}
+
+\newcommand\Linepage[1][0.3in]{% Change to suit
+    %\color{gray!50}
   \vbox to \dimexpr\textheight-\pagetotal-#1\relax {% Let TeX do the work...
     \leaders\hbox to \linewidth{\rule{0pt}{#1}\hrulefill}\vfil
   }%
 }
-\newcommand{\mypage}{\newpage\thispagestyle{empty}}
+\newcommand{\mypage}{\newpage{\Linepage}\newpage}
 \newcommand{\mydate}[1]{\noindent\emph{#1}}
 \newcommand{\mytime}[1]{\hfill\emph{#1}\\}
 \newcommand{\mytitle}[1]{\noindent\begin{center}\textbf{\Large #1}\end{center}}
 \newcommand{\myauthor}[1]{\noindent #1}
 \newcommand{\myaffiliation}[1]{(#1)\\}
 \newenvironment{myabstract}{\noindent}{\par\Linepage}
-\begin{document}
 
+\begin{document}
+\pagestyle{empty}
+\setpdftargetpages  % if you use pdflatex
 \begin{center}
+    \mbox{}
+    \vfill
     \Large\bf
     Calculus of Variations\\ and \\Partial Differential Equations\\
     \vskip 0.5cm
@@ -28,29 +37,55 @@
     \textbf{June 12-16, 2023}
     \vskip 0.5cm
     \textbf{Aula Magna Università di Pisa}\\ 
-    \textbf{Largo Bruno Pontecorvo 5}
-\end{center}
+    \textbf{Largo Bruno Pontecorvo 5}    
+    
+    \vfill
 
+    \includegraphics[width=0.5\textwidth]{ambrosio.png}
+
+    \vfill
+
+    \begin{tabular}{lcl}
+    \includegraphics*[height=1.3cm]{matematica_dx_nero.pdf}
+    & \hspace{2cm}&
+    \includegraphics*[height=1.5cm]{marchio_unipi_orizz_black.png}
+    \\
+    \includegraphics*[height=1.5cm]{Sns-Scuola-Normale-Superiore-Pisa-black.png}
+    & &
+    \includegraphics*[height=1.6cm]{logo_DIMAI_negativo-1-768x384.png}
+    \end{tabular}
+  \end{center}
+    
+\newpage
+{\Linepage}
+%{\Linepage}
+\newpage
 \begin{center}
 \textbf{\large Timetable}
 \vskip 0.5cm
 \begin{tabular}{|r|ccccc|}
 \hline
-\it time  & monday & tuesday & wednesday & thursday & friday \\
+\it   & monday & tuesday & wednesday & thursday & friday \\
 \hline
-\it 10:00 & \bf Figalli & \bf De Philippis & \bf Cabré & \bf Fonseca & \bf Dal Maso \\ 
-\it 11:00 & \it break & \it break & \it break & \it break & \it break \\
-\it 11:30 & \bf Savaré & \bf Fusco & \bf Pallara & \bf Gigli & \bf Cannarsa \\
-\it 12:30 & & \bf Garroni & \bf Mondino & \bf Buttazzo & \bf Brenier \\
+\it 9:00  & -- & \bf De Philippis & \bf Cabré & \bf Fonseca & \bf Dal Maso \\ 
+\it 9:30  & \it welcome & $\vert$ & $\vert$ & $\vert$ & $\vert$ \\ 
+\it 10:00 & \bf Figalli & \it break & \it break & \it break & \it break \\
+\it 10:30 & $\vert$ & \bf Fusco & \bf Pallara & \bf Gigli & \bf Cannarsa \\
+\it 11:00 & \it break & $\vert$ & $\vert$ & $\vert$ & $\vert$ \\
+\it 11:30 & \bf Savaré & \bf Garroni & \bf Mondino & \bf Buttazzo & \bf Brenier \\
+          & $\vert$ & $\vert$ & $\vert$ & $\vert$ & $\vert$ \\
 \hline
 \it 13:30 & \it lunch & \it lunch & \it lunch & \it lunch & \it lunch \\
 \hline
 \it 15:00 & \bf Braides & \bf \bf Mantegazza & \bf Serra Cassano & \bf Trevisan & \\
+ & $\vert$ & $\vert$ & $\vert$ & $\vert$ & \\
 \it 16:00 & \it break & \it break & \it break & \it break & \\
 \it 16:30 & \bf Fornasier & \bf \bf Alberti & \bf Masnou & \bf Honda & \\
+ & $\vert$ & $\vert$ & $\vert$ & $\vert$ & \\
 \hline
 \end{tabular}
 \end{center}
+{\Linepage}
 
 \input{abstracts/figalli.tex}
 \input{abstracts/savare.tex}
@@ -79,4 +114,9 @@
 \input{abstracts/cannarsa.tex}
 \input{abstracts/brenier.tex}
 %
+\newpage
+{\Linepage}
+\newpage
+\noindent\includegraphics[width=\textwidth]{mappa.png}
+
 \end{document}
