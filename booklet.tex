@@ -16,11 +16,11 @@
 }
 \newcommand{\mypage}{\newpage{\Linepage}\newpage}
 \newcommand{\mydate}[1]{\noindent\emph{#1}}
-\newcommand{\mytime}[1]{\hfill\emph{#1}\\}
-\newcommand{\mytitle}[1]{\noindent\begin{center}\textbf{\Large #1}\end{center}}
-\newcommand{\myauthor}[1]{\noindent #1}
-\newcommand{\myaffiliation}[1]{(#1)\\}
-\newenvironment{myabstract}{\noindent}{\par\Linepage}
+\newcommand{\mytime}[1]{\hfill\emph{#1}\vspace{0.3cm}\\}
+\newcommand{\myauthor}[1]{\noindent{\large \bf #1}}
+\newcommand{\myaffiliation}[1]{\large (#1)\\}
+\newcommand{\mytitle}[1]{\noindent\begin{center}{\Large\it #1}\end{center}}
+\newenvironment{myabstract}{}{\par\Linepage}
 
 \begin{document}
 \pagestyle{empty}
@@ -46,13 +46,13 @@
     \vfill
 
     \begin{tabular}{lcl}
-    \includegraphics*[height=1.3cm]{matematica_dx_nero.pdf}
+    \includegraphics*[height=1.8cm]{matematica_dx_nero.pdf}
     & \hspace{2cm}&
-    \includegraphics*[height=1.5cm]{marchio_unipi_orizz_black.png}
+    \includegraphics*[height=2cm]{marchio_unipi_orizz_black.png}
     \\
-    \includegraphics*[height=1.5cm]{Sns-Scuola-Normale-Superiore-Pisa-black.png}
+    \mbox{\hspace{3mm}}\includegraphics*[height=2cm]{Sns-Scuola-Normale-Superiore-Pisa-black.png}
     & &
-    \includegraphics*[height=1.6cm]{logo_DIMAI_negativo-1-768x384.png}
+    \includegraphics*[height=2.2cm]{logo_DIMAI_negativo-1-768x384.png}
     \end{tabular}
   \end{center}
     
@@ -61,7 +61,7 @@
 %{\Linepage}
 \newpage
 \begin{center}
-\textbf{\large Timetable}
+\textbf{\large Timetable, June 12-16}
 \vskip 0.5cm
 \begin{tabular}{|r|ccccc|}
 \hline
