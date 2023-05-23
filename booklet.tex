@@ -1,0 +1,82 @@
+\documentclass[a4paper, 12pt, oneside]{book}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[english]{babel}
+\usepackage{xcolor}
+\newcommand\Linepage[1][0.25in]{% Change to suit
+    \color{gray!30}
+  \vbox to \dimexpr\textheight-\pagetotal-#1\relax {% Let TeX do the work...
+    \leaders\hbox to \linewidth{\rule{0pt}{#1}\hrulefill}\vfil
+  }%
+}
+\newcommand{\mypage}{\newpage\thispagestyle{empty}}
+\newcommand{\mydate}[1]{\noindent\emph{#1}}
+\newcommand{\mytime}[1]{\hfill\emph{#1}\\}
+\newcommand{\mytitle}[1]{\noindent\begin{center}\textbf{\Large #1}\end{center}}
+\newcommand{\myauthor}[1]{\noindent #1}
+\newcommand{\myaffiliation}[1]{(#1)\\}
+\newenvironment{myabstract}{\noindent}{\par\Linepage}
+\begin{document}
+
+\begin{center}
+    \Large\bf
+    Calculus of Variations\\ and \\Partial Differential Equations\\
+    \vskip 0.5cm
+    \large \textbf{Workshop in honour of Luigi Ambrosio's 60th birthday}
+    \vskip 0.5cm
+    \normalsize
+    \textbf{June 12-16, 2023}
+    \vskip 0.5cm
+    \textbf{Aula Magna Università di Pisa}\\ 
+    \textbf{Largo Bruno Pontecorvo 5}
+\end{center}
+
+\begin{center}
+\textbf{\large Timetable}
+\vskip 0.5cm
+\begin{tabular}{|r|ccccc|}
+\hline
+\it time  & monday & tuesday & wednesday & thursday & friday \\
+\hline
+\it 10:00 & \bf Figalli & \bf De Philippis & \bf Cabré & \bf Fonseca & \bf Dal Maso \\ 
+\it 11:00 & \it break & \it break & \it break & \it break & \it break \\
+\it 11:30 & \bf Savaré & \bf Fusco & \bf Pallara & \bf Gigli & \bf Cannarsa \\
+\it 12:30 & & \bf Garroni & \bf Mondino & \bf Buttazzo & \bf Brenier \\
+\hline
+\it 13:30 & \it lunch & \it lunch & \it lunch & \it lunch & \it lunch \\
+\hline
+\it 15:00 & \bf Braides & \bf \bf Mantegazza & \bf Serra Cassano & \bf Trevisan & \\
+\it 16:00 & \it break & \it break & \it break & \it break & \\
+\it 16:30 & \bf Fornasier & \bf \bf Alberti & \bf Masnou & \bf Honda & \\
+\hline
+\end{tabular}
+\end{center}
+
+\input{abstracts/figalli.tex}
+\input{abstracts/savare.tex}
+\input{abstracts/braides.tex}
+\input{abstracts/fornasier.tex}
+%
+\input{abstracts/dephilippis.tex}
+\input{abstracts/fusco.tex}
+\input{abstracts/garroni.tex} 
+\input{abstracts/mantegazza.tex}
+\input{abstracts/alberti.tex}
+%
+\input{abstracts/cabre.tex}
+\input{abstracts/pallara.tex}
+\input{abstracts/mondino.tex}
+\input{abstracts/serracassano.tex}
+\input{abstracts/masnou.tex}
+%
+\input{abstracts/fonseca.tex}
+\input{abstracts/gigli.tex}
+\input{abstracts/buttazzo.tex}
+\input{abstracts/trevisan.tex}
+\input{abstracts/honda.tex}
+%
+\input{abstracts/dalmaso.tex}
+\input{abstracts/cannarsa.tex}
+\input{abstracts/brenier.tex}
+%
+\end{document}
