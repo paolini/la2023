@@ -3,26 +3,6 @@
 %  https://it.overleaf.com/latex/templates/nju-cover-letter-template-nan-da-tou-gao-xin-mo-ban/tkdpzmwxvksw
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass{article}
-
-\usepackage{xparse}
-
-\ExplSyntaxOn
-
-\NewDocumentCommand{\getenv}{om}
- {
-  \sys_get_shell:nnN { kpsewhich ~ --var-value ~ #2 } { } \l_tmpa_tl
-  \tl_trim_spaces:N \l_tmpa_tl
-  \IfNoValueTF { #1 }
-   {
-    \tl_use:N \l_tmpa_tl
-   }
-   {
-    \tl_set_eq:NN #1 \l_tmpa_tl
-   }
- }
-
-\ExplSyntaxOff
-
 %
 % Configurazione della lettera 
 %
@@ -96,7 +76,7 @@
 %	LETTER CONTENT
 %----------------------------------------------------------------------------------------
 Si attesta che \textbf{#1 #2} (\texttt{#3}) ha partecipato al 
-convegno \emph{Calculus of Variations and Geometric Measure Theory}
+convegno ``\emph{Calculus of Variations and Geometric Measure Theory}''
 che si è tenuto presso l'Università di Pisa, dal #4 al #5 giugno 2023.
 
 Pisa, 16 giugno 2023
@@ -107,9 +87,10 @@ Per il comitato organizzatore,
 
 \vspace{20pt} % Vertical whitespace
 
-\nome \cognome\\ 
-Department of Mathematics, \\
-University of Pisa. 
+%\includegraphics[height=6mm]{firma.jpg}\\
+\nome\ \cognome\\ 
+Dipartimento di Matematica, \\
+Università di Pisa. 
 
 \bigskip
 
@@ -118,14 +99,17 @@ University of Pisa.
 \end{center}
 
 I hereby certify that \textbf{#1 #2} (\texttt{#3}) has participated 
-in the conference \emph{Calculus of Variations and Geometric Measure Theory} 
+in the conference ``\emph{Calculus of Variations and Geometric Measure Theory}'' 
 held at the University of Pisa, from #4 to #5 June 2023.
+
+Pisa, 16 June 2023
 
 On behalf of the organizing committee,
 
 \vspace{20pt} % Vertical whitespace
 
-\nome \cognome\\
+%\includegraphics[height=6mm]{firma.jpg}\\
+\nome\ \cognome\\
 Department of Mathematics, \\
 University of Pisa.
 
